@@ -1,0 +1,28 @@
+{
+  "name": "feinterviewbox",
+  "version": "1.0.0",
+  "description": "Commont JS methods to prepare for the front-end interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/14glwu/FEInterviewBox.git"
+  },
+  "keywords": [
+    "interviewBox",
+    "javascript"
+  ],
+  "author": "ericwu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/14glwu/FEInterviewBox/issues"
+  },
+  "homepage": "https://github.com/14glwu/FEInterviewBox#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "prettier": "1.15.3"
+  }
+}

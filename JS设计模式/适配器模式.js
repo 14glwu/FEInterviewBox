@@ -3,17 +3,17 @@
  */
 // 老接口
 const oldCity = (function() {
-    return [
-        {
-            name: 'hangzhou',
-            id: 11,
-        },
-        {
-            name: 'jinhua',
-            id: 12
-        }
-    ]
-}())
+  return [
+    {
+      name: 'hangzhou',
+      id: 11
+    },
+    {
+      name: 'jinhua',
+      id: 12
+    }
+  ];
+})();
 
 // 新接口希望是下面形式
 // {
@@ -23,11 +23,11 @@ const oldCity = (function() {
 
 // 这时候就可采用适配者模式
 const adaptor = function(oldCity) {
-    const obj = {};
-    for (let city of oldCity) {
-        obj[city.name] = city.id
-    }
-    return obj
+  const obj = {};
+  for (const city of oldCity) {
+    obj[city.name] = city.id;
+  }
+  return obj;
 };
 
 console.log(adaptor(oldCity));

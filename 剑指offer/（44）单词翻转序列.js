@@ -1,4 +1,6 @@
-function ReverseSentence(str)
-{
-    return str.split(" ").reverse().join(" ");
+function ReverseSentence(str) {
+  return str
+    .split(' ')
+    .reverse()
+    .join(' ');
 }
