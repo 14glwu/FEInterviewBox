@@ -2,11 +2,11 @@
 
 此外，欢迎大家给这个仓库提 issue，增加问题、解答，亦或是其他有关 JS 的代码。
 
-To Do List:
-[x]JS 设计模式
-[x]剑指 offer
-[x]常见 JS 方法实现
-[]《深处浅出 Nodejs》
-[]leetcode
-[]《JS 高级程序设计》
-[]面试题目
+To Do List: 
+-[x]JS 设计模式
+-[x]剑指 offer
+-[x]常见 JS 方法实现
+-[]《深处浅出 Nodejs》
+-[]leetcode
+-[]《JS 高级程序设计》
+-[]面试题目
