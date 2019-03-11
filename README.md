@@ -7,7 +7,7 @@ To Do List:
 - [x] JS 设计模式
 - [x] 剑指 offer
 - [x] 常见 JS 方法实现
-- [ ] 《深处浅出 Nodejs》
+- [ ] 《深入浅出 Nodejs》
 - [ ] Leetcode
 - [ ] 《JS 高级程序设计》
 - [ ] 面试题目
