@@ -1,3 +1,4 @@
+// 第一种
 function match(s, pattern) {
   const reg = new RegExp(`^${pattern}$`);
   return reg.test(s);
