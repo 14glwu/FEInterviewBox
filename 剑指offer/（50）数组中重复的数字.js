@@ -6,7 +6,8 @@ function duplicate(numbers, duplication) {
         duplication[0] = numbers[i];
         return true;
       }
-      [numbers[i], numbers[numbers[i]]] = [numbers[numbers[i]], numbers[i]]; // 交换
+      let temp = numbers[i];
+      [numbers[i], numbers[temp]] = [numbers[temp], numbers[i]]; // 交换
     }
   }
   return false;
