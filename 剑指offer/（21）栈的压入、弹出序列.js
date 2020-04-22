@@ -18,24 +18,3 @@ function IsPopOrder(pushV, popV) {
   }
   return flag;
 }
-// 第二种
-function IsPopOrder2(pushV, popV) {
-  // write code here
-  const helpStack = [];
-  helpStack.push(pushV.shift());
-  while (helpStack.length) {
-    const x = helpStack.pop(),
-      y = popV.shift();
-    if (x !== y) {
-      helpStack.push(x);
-      popV.unshift(y);
-      if (!pushV.length) {
-        return false;
-      }
-      if (pushV.length) {
-        helpStack.push(pushV.shift());
-      }
-    }
-  }
-  return true;
-}
