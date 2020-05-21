@@ -39,11 +39,7 @@ function Permutation2(str) {
 }
 function permutate2(arr, index, res) {
   if (arr.length === index) {
-    let s = '';
-    for (let i = 0; i < arr.length; i++) {
-      s += arr[i];
-    }
-    return res.push(s);
+    return res.push(arr.join(''));
   }
   for (let i = index; i < arr.length; i++) {
     [arr[index], arr[i]] = [arr[i], arr[index]]; // 交换
