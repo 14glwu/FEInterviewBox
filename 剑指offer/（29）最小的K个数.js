@@ -1,4 +1,4 @@
-function GetLeastNumbersSolution(input, k) {
+function GetLeastNumbers_Solution(input, k) {
   if (input.length === 0 || k > input.length || k < 1) return [];
   const left = 0,
     right = input.length - 1;

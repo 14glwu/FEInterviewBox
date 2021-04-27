@@ -1,5 +1,5 @@
 // 暴力解法
-function NumberOf1Between1AndNSolution(n) {
+function NumberOf1Between1AndN_Solution(n) {
   let ones = 0;
   for (let i = 0; i <= n; i++) {
     let num = i;
@@ -14,7 +14,7 @@ function NumberOf1Between1AndNSolution(n) {
 }
 
 // 优化版
-function NumberOf1Between1AndNSolution2(n) {
+function NumberOf1Between1AndN_Solution2(n) {
   if (n <= 0) return 0;
   let count = 0;
   for (let i = 1; i <= n; i *= 10) {

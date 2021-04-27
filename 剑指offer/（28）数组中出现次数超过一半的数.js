@@ -1,5 +1,5 @@
 // 第一种
-function MoreThanHalfNumSolution(numbers) {
+function MoreThanHalfNum_Solution(numbers) {
   const left = 0,
     right = numbers.length - 1;
   let key = partition(numbers, left, right);
@@ -48,7 +48,7 @@ function checkMoreThanHalf(numbers, num) {
 }
 
 // 第二种
-function MoreThanHalfNumSolution2(numbers) {
+function MoreThanHalfNum_Solution2(numbers) {
   let res = numbers[0],
     times = 1;
   for (let i = 0; i < numbers.length; i++) {

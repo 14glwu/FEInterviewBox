@@ -2,17 +2,17 @@ function findKmax(a, k) {
   // 查找第K大的数
   const left = 0,
     right = a.length - 1;
-  let key = partition(a, left, right);
-  let len = a.length - key;
+  let index = partition(a, left, right);
+  let len = a.length - index;
   while (len !== k) {
     if (len > k) {
-      key = partition(a, key + 1, right);
+      index = partition(a, index + 1, right);
     } else {
-      key = partition(a, left, key - 1);
+      index = partition(a, left, index - 1);
     }
-    len = a.length - key;
+    len = a.length - index;
   }
-  return a[key];
+  return a[index];
 }
 function partition(a, left, right) {
   const key = a[left]; // 一开始让key为第一个数

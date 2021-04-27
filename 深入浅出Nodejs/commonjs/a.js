@@ -1,14 +1,14 @@
 // a.js
-let count = 1;
+let a = { count: 1 };
 function setCount() {
-  count += 1;
+  a.count += 1;
 }
 setTimeout(() => {
-  console.log('a', count);
+  console.log('a', a.count);
 });
 
 module.exports = {
-  count,
+  a,
   setCount
 };
 

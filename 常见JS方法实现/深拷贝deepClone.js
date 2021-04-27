@@ -4,10 +4,9 @@
 function deepClone(obj) {
   if (typeof obj === 'function') {
     const str = obj.toString();
-    /^function\s*\w*\s*\((.*)\)\s*\{([\s\S]*)/.exec(str); // 匹配函数体
+    /^function\s*\w*\s*\((.*)\)\s*\{([\s\S]*)\}$/.exec(str); // 匹配函数体
     const args = RegExp.$1.split(',').map((item) => item.trim());
-    const str1 = RegExp.$2.slice(0, -1); // 去除末尾花括号
-    return new Function(...args, str1);
+    return new Function(...args, RegExp.$2);
   }
   if (!obj || typeof obj !== 'object') return obj;
   if (Object.prototype.toString.call(obj) === '[object Date]')

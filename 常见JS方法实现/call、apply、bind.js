@@ -102,6 +102,7 @@ Function.prototype.bind = function(context, ...rest) {
   const self = this;
   return function F(...args) {
     if (this instanceof F) {
+      // 当new的时候又要把this改回去
       return new self(...rest, ...args);
     }
     return self.apply(context, rest.concat(args));

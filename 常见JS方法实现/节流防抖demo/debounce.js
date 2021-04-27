@@ -4,7 +4,12 @@
 let count = 1;
 const container = document.getElementById('container');
 
+let pre = new Date();
+
 function getUserAction() {
+  now = new Date();
+  console.log(`时间相差${now - pre}`);
+  pre = now;
   container.innerHTML = count++;
 }
 
@@ -16,7 +21,6 @@ function throttle(func, wait, options) {
   let timeout, context, args, result;
   let previous = 0;
   if (!options) options = {};
-  console.log(options.leading === false);
   const later = function() {
     previous = options.leading === false ? 0 : new Date().getTime();
     timeout = null;
@@ -26,13 +30,10 @@ function throttle(func, wait, options) {
   const throttled = function() {
     const now = new Date().getTime();
     if (!previous && options.leading === false) previous = now;
-    console.log(`now${now}`);
-    console.log(`previous${previous}`);
     const remaining = wait - (now - previous);
     context = this;
     args = arguments;
     if (remaining <= 0 || remaining > wait) {
-      console.log(2222);
       if (timeout) {
         clearTimeout(timeout);
         timeout = null;
@@ -51,6 +52,33 @@ function throttle(func, wait, options) {
     timeout = null;
   };
   return throttled;
+}
+
+function throttle2(fn, wait) {
+  let timer = null;
+  let pre = 0;
+  let context, args;
+  const later = function() {
+    pre = now;
+    timer = context = args = null;
+    fn.apply(context, args);
+  };
+  return function() {
+    context = this;
+    args = arguments;
+    let now = Date.now();
+    const remaining = wait - (now - pre);
+    if (remaining <= 0) {
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+      pre = now;
+      fn.apply(context, args);
+    } else if (!timer) {
+      timer = setTimeout(later, remaining);
+    }
+  };
 }
 // 防抖
 function debounce(func, wait, immediate) {

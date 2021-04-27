@@ -4,7 +4,10 @@
   "description": "Commont JS methods to prepare for the front-end interview",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "d": "bash deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^5.16.0",
-    "prettier": "1.15.3"
+    "prettier": "1.15.3",
+    "vuepress": "^1.5.0"
   }
 }
