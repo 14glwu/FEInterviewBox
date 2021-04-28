@@ -1,5 +1,4 @@
 module.exports = {
-  base: '/FEInterviewBox/',
   title: '前端面试盒子',
   description: '常用的JS代码和前端知识点',
   markdown: {
